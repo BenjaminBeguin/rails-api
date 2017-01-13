@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   	namespace :api do
   	    namespace :v1 do
+			get 'users/my_post';
 			resources :users, only: [:index, :create, :show, :update, :destroy]
 			resources :posts, only: [:index, :show]
 			#resources :sessions, only: [:create]

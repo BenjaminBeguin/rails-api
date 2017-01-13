@@ -1,4 +1,6 @@
 class Api::V1::UsersController < Api::V1::BaseController
+	before_action :authenticate_user!
+
 	def show
 		user = User.find(params[:id])
 		render(json: Api::V1::UserSerializer.new(user).to_json)
@@ -14,6 +16,11 @@ class Api::V1::UsersController < Api::V1::BaseController
 	        root: 'users',
 	      )
 	    )
+	end
+
+	def my_post
+		user = current_user
+		render json: user
 	end
 
 end
