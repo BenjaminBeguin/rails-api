@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  apipie
   	## API ##
 
   	namespace :api do
@@ -29,6 +28,11 @@ Rails.application.routes.draw do
 	devise_for :users, controllers: {
 		sessions: 'users/sessions'
 	}
+
+
+	devise_for :admin_users, ActiveAdmin::Devise.config
+	ActiveAdmin.routes(self)
+	apipie
 
   	## end API ##
 end

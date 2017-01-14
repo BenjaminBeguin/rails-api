@@ -47,6 +47,9 @@ gem 'kaminari'
 gem 'redis-throttle', git: 'git://github.com/lelylan/redis-throttle.git'
 gem 'rack-cors'
 gem 'apipie-rails'
+gem 'factory_girl_rails'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+
 
 # admin
 gem 'activeadmin', github: 'activeadmin'

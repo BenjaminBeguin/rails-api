@@ -16,3 +16,5 @@
 		created_at: Faker::Date.between(2.days.ago, Date.today).to_date
 	)
 end
+
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
