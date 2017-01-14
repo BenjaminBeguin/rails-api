@@ -46,6 +46,11 @@ gem 'pundit'
 gem 'kaminari'
 gem 'redis-throttle', git: 'git://github.com/lelylan/redis-throttle.git'
 gem 'rack-cors'
+gem 'apipie-rails'
+
+# admin
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: '0-9-stable'
 

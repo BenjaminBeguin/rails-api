@@ -5,6 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+require 'rack/redis_throttle'
 
 
 
@@ -15,7 +16,7 @@ module Railsapi
 	Rails.application.configure do
 		config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
 		config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
-		#config.middleware.use Rack::RedisThrottle::Daily, max: 100000
+		config.middleware.use Rack::RedisThrottle::Daily, max: 100000
 
 		config.middleware.insert_before 0, "Rack::Cors" do
 			allow do

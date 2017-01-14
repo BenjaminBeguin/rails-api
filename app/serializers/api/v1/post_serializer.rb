@@ -2,6 +2,7 @@ class Api::V1::PostSerializer < ActiveModel::Serializer
     attributes :id,
                 :title,
                 :content,
+                :user_id,
                 # :activated,
                 # :admin,
                 :created_at,
