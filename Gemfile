@@ -53,6 +53,7 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 
 # admin
 gem 'activeadmin', github: 'activeadmin'
+# gem "active_material", github: "vigetlabs/active_material"
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: '0-9-stable'
